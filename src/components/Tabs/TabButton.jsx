@@ -4,9 +4,9 @@ const TabButton = ({ label, isActive, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 rounded-md font-medium transition ${
+      className={`px-8 py-3 font-medium transition-all duration-300 relative z-10 w-full ${
         isActive
-          ? "bg-accent text-white shadow-sm"
+          ? "text-white"
           : "text-gray-400 hover:text-white hover:bg-accent/40"
       }`}
     >

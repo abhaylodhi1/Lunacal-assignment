@@ -2,26 +2,11 @@
 
 @theme {
   --color-background: #0f1215;
-  --color-card: #1a1d21;
-  --color-accent: #2d3238;
+  --color-card: #363C43;
+  --color-accent: #171717;
+  --color-button:#161718;
+  --color-text-button: #303439;
 }
 
-body {
-  background-color: var(--color-background);
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-}
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeIn {
-  animation: fadeIn 0.3s ease-in-out;
-}
+
+

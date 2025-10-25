@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,7 +8,17 @@
   --color-accent: #171717;
   --color-button:#161718;
   --color-text-button: #303439;
+  --color-left-rigt-button:#6F787C;
+  --color-left-screen:#616161D1;
+  --color-left-screen-border:#96BEE7;
+  --color-text-upper:#969696;
+  --color-text-label:#A3ADB2;
+  --color-question-icon:#A3ADBA;
+  --color-grid:#4A4E54;
 }
 
 
 
+html,body {
+  font-family: 'Poppins', sans-serif;
+}

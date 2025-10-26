@@ -3,7 +3,8 @@ import { FiTrash2 } from "react-icons/fi";
 
 export default function GalleryCard({ image, onRemove }) {
   return (
-    <div className="min-w-40 max-w-[220px] bg-[#0f1113] rounded-xl overflow-hidden shadow-sm relative hover:-translate-y-1 hover:shadow-lg transition-transform duration-200">
+    <div className="min-w-[180px] max-w-[220px] bg-[#0f1113] rounded-xl overflow-hidden shadow-sm relative hover:-translate-y-1 hover:shadow-lg transition-transform duration-200">
+
 
       <img
         src={image.src}

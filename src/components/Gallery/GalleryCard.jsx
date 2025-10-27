@@ -9,7 +9,7 @@ export default function GalleryCard({ image, onRemove }) {
       <img
         src={image.src}
         alt={image.name || "gallery"}
-        className="w-full h-36 object-cover block"
+        className="w-full h-42 object-cover block"
         onError={(e) => {
         
           e.currentTarget.src =

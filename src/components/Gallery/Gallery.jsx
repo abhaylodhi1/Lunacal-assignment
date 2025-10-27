@@ -82,10 +82,10 @@ export default function Gallery() {
 
      
       <div className="ml-8">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-sm font-medium text-gray-300 bg-accent px-4 py-2 rounded-lg">
-            Gallery
-          </h3>
+      <div className="flex items-center justify-between mb-4">
+  <h3 className="text-sm font-poppins text-gray-300 bg-accent px-6 py-3 rounded-2xl">
+    Gallery
+  </h3>
 
           <div className="flex items-center gap-3">
           
@@ -158,7 +158,7 @@ export default function Gallery() {
 
         <div
   ref={scrollRef}
-  className="flex gap-4 overflow-x-auto py-2 scrollbar-hide"
+  className="flex gap-4 overflow-x-auto py-1 scrollbar-hide"
   style={{ WebkitOverflowScrolling: "touch" }}
 >
           {images.length === 0 ? (

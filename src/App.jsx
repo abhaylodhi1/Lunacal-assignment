@@ -13,7 +13,7 @@ export default function App() {
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center gap-6 h-[90vh] px-6 lg:pr-12 relative">
      
-        <div className="absolute left-[5vw] right-[7vw] top-[49%] border-t-[3px] border-line opacity-80"></div>
+        <div className="absolute left-[5vw] right-[7vw] top-[48%] border-t-[3px] border-line opacity-80"></div>
 
         <Tabs />
 

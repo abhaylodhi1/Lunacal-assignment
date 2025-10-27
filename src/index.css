@@ -15,10 +15,17 @@
   --color-text-label:#A3ADB2;
   --color-question-icon:#A3ADBA;
   --color-grid:#4A4E54;
+  --color-line:#282828;
+  --color-slider:#28292F;
 }
-
 
 
 html,body {
   font-family: 'Poppins', sans-serif;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+

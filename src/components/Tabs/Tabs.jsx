@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { HelpCircle } from "lucide-react"; // removed Grid import
+import { HelpCircle } from "lucide-react";
 import tabsData from "./tabsData";
 import TabButton from "./TabButton";
 
@@ -7,6 +7,7 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState("about");
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const tabsRef = useRef([]);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     const activeIndex = tabsData.findIndex((tab) => tab.id === activeTab);
@@ -22,12 +23,12 @@ const Tabs = () => {
 
   return (
     <section className="bg-card rounded-2xl p-3 pr-9 shadow-md relative">
-      {/* ? icon - top left */}
+   
       <button className="absolute top-1 left-0.5 p-2 bg-muted rounded-full hover:bg-muted/80 transition">
         <HelpCircle size={24} className="text-question-icon" />
       </button>
 
-      {/* Custom 6-box grid (no border) */}
+   
       <div
         className="absolute left-1 top-1/2 -translate-y-1/2 bg-muted rounded-[1.16px] p-1 flex flex-wrap gap-[2px]"
         style={{
@@ -47,16 +48,18 @@ const Tabs = () => {
               height: "7px",
               borderRadius: "1px",
             }}
-          ></div>
+          />
         ))}
       </div>
 
-      {/* Main content shifted right so icons don’t overlap */}
       <div className="ml-8">
-        {/* Tabs bar */}
         <div className="justify-center mb-4">
           <div className="flex justify-center bg-accent rounded-2xl relative px-1">
-            <div className="flex overflow-x-auto hide-scrollbar w-full relative z-0">
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto hide-scrollbar w-full relative z-0"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
               {tabsData.map((tab, index) => (
                 <div
                   key={tab.id}
@@ -70,21 +73,58 @@ const Tabs = () => {
                   />
                 </div>
               ))}
+
+           
               <div
-                className="absolute top-1 bottom-1 bg-card rounded-2xl z-0"
+                className="absolute top-1 bottom-1 bg-slider rounded-2xl z-0"
                 style={indicatorStyle}
               />
+
+              <div className="absolute top-0 right-0 w-px h-full z-20 pointer-events-none" />
             </div>
           </div>
         </div>
 
-        {/* Tab content */}
-        <div className="items-center h-40">
-          <p className="text-sm text-gray-300 max-w-md text-shadow-text-upper">
-            {tabsData.find((tab) => tab.id === activeTab)?.content}
-          </p>
+      
+        <div className="h-40 overflow-y-auto relative scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent">
+          <div className="h-[320%] pr-2">
+            <p className="text-sm  text-text-upper">
+              {tabsData.find((tab) => tab.id === activeTab)?.content}
+            </p>
+          </div>
         </div>
       </div>
+
+      <style>{`
+        /* Hide horizontal scrollbar */
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Vertical scrollbar width */
+        .scrollbar-thin::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        /* Gradient vertical scrollbar thumb */
+        .scrollbar-thumb-gray-400::-webkit-scrollbar-thumb {
+          border-radius: 3px;
+          background: linear-gradient(180deg, #888989 0%, #4A4E54 100%);
+        }
+
+        /* Transparent track */
+        .scrollbar-track-transparent::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        /* Hide buttons and corners */
+        .scrollbar-thin::-webkit-scrollbar-button {
+          display: none;
+        }
+        .scrollbar-thin::-webkit-scrollbar-corner {
+          background: transparent;
+        }
+      `}</style>
     </section>
   );
 };

@@ -5,7 +5,16 @@ const tabsData = [
       content: `I'm a passionate Frontend Developer focused on crafting
       intuitive and visually appealing user interfaces. I enjoy building
       clean, maintainable code and continuously learning new technologies
-      to improve the overall user experience.`,
+      to improve the overall user experience.
+      I'm a passionate Frontend Developer focused on crafting
+      intuitive and visually appealing user interfaces. I enjoy building
+      clean, maintainable code and continuously learning new technologies
+      to improve the overall user experience.
+      I'm a passionate Frontend Developer focused on crafting
+      intuitive and visually appealing user interfaces. I enjoy building
+      clean, maintainable code and continuously learning new technologies
+      to improve the overall user experience.
+      `,
     },
     {
       id: "experience",

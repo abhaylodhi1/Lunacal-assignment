@@ -3,7 +3,7 @@ import { FiTrash2 } from "react-icons/fi";
 
 export default function GalleryCard({ image, onRemove }) {
   return (
-    <div className="min-w-[200px] max-w-[220px] bg-[#0f1113] rounded-xl overflow-hidden shadow-sm relative hover:-translate-y-1 hover:shadow-lg transition-transform duration-200">
+    <div className="min-w-[190px] max-w-[220px] bg-[#0f1113] rounded-xl overflow-hidden shadow-sm relative hover:-translate-y-1 hover:shadow-lg transition-transform duration-200">
 
 
       <img
@@ -17,7 +17,7 @@ export default function GalleryCard({ image, onRemove }) {
         }}
       />
 
-      <div className="p-3 flex items-center justify-between bg-gradient-to-t from-black/60 to-transparent absolute bottom-0 left-0 right-0">
+      <div className="p-3 flex items-center justify-between bg-linear-to-t from-black/60 to-transparent absolute bottom-0 left-0 right-0">
         <div className="text-xs truncate max-w-[120px]">{image.name}</div>
         <button
           type="button"
